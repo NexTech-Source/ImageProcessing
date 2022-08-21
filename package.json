@@ -1,0 +1,41 @@
+{
+  "name": "imageprocessing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install_arm64": "build-opencv --version 4.5.4 --flag=\"-DCMAKE_SYSTEM_PROCESSOR=arm64 -DCMAKE_OSX_ARCHITECTURES=arm64\" build",
+    "install_4.5.5_cuda": "build-opencv --version 4.5.5 --flags=\"-DWITH_CUDA=ON -DWITH_CUDNN=ON -DOPENCV_DNN_CUDA=ON -DCUDA_FAST_MATH=ON\" build",
+    "do-install": "build-opencv build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NexTech-Source/ImageProcessing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NexTech-Source/ImageProcessing/issues"
+  },
+  "homepage": "https://github.com/NexTech-Source/ImageProcessing#readme",
+  "dependencies": {
+    "@u4/opencv4nodejs": "^6.2.1",
+    "caman": "^4.1.2",
+    "canvas": "^2.9.3",
+    "jimp": "^0.16.1",
+    "jimp-autocrop": "^0.1.0",
+    "jsfeat": "^0.0.8",
+    "smartcrop": "^2.0.5"
+  },
+  "opencv4nodejs": {
+    "autoBuildOpencvVersion": "1",
+    "OPENCV_INCLUDE_DIR": "",
+    "OPENCV_LIB_DIR": "",
+    "OPENCV_BIN_DIR": ""
+  },
+  "devDependencies": {
+    "grunt": "^1.5.3"
+  }
+}
